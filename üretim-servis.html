@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlke Mobilya - İletişim</title>
+    <link rel="stylesheet" href="kurumsal.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <img src="img/ilkebeyaz.jpeg" alt="">
+        <nav>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li class="dropdown">
+                    <a href="#">Kurumsal</a>
+                    <ul class="dropdown-content">
+                        <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+                        <li><a href="üretim-servis.html">Üretim ve Servis</a></li>
+                        <li><a href="tadilat.html">Tadilat</a></li>
+                        <li><a href="biz-kimiz.html">Biz Kimiz?</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Ürünlerimiz</a>
+                    <ul class="dropdown-content">
+                        <li><a href="mutfak-mobilyalari.html">Mutfak Mobilyaları</a></li>
+                        <li><a href="yatak-odasi.html">Yatak Odası</a></li>
+                        <li><a href="cocuk-odasi.html">Çocuk Odası</a></li>
+                        <li><a href="vestiyer.html">Vestiyer</a></li>
+                        <li><a href="duvar-unitesi.html">Duvar Ünitesi</a></li>
+                        <li><a href="banyo-mobilyalari.html">Banyo Mobilyaları</a></li>
+                    </ul>
+                </li>
+                <li><a href="iletişim.html">İletişim</a></li>
+            </ul>
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Ara">
+            </div>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>
+            Üretim ve Servis
+        </h1>
+        <p>
+            Özel tasarımları,Sınırsız Renk ve Modelleriyle Beş Kolay Adımda Evinizi Yeniliyor.
+
+            Birinci Adımda; Ücretsiz keşif ile evinizin detaylı bir ölçümlemesi yapılıyor.
+            
+            İkinci Adımda; Üç boyutlu olarak projenizin çizilmesi ücretsiz olarak yapılıyor.
+            
+            Üçüncü Adımda; Sınırsız renk ve modellerimizden seçim yapması size kalıyor.
+            
+            Dördüncü Adımda; Biz en kaliteli malzemelerle Avrupa standartlarında olan projelerinizi kendi tesislerimizde üretiyoruz.
+            
+            Beşinci Adımda; Sizin projenize göre özel olarak tasarlanan ve üretilen ürünlerinizi profesyonel ekibimiz ile kusursuz bir şekilde monte ediliyor.
+        </p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 İlke Mobilya. Tüm Hakları Saklıdır.</p>
+        <p><a href="gizlilik.html">Gizlilik Politikası</a> | <a href="kullanım-şartları.html">Kullanım Şartları</a></p>
+    </footer>
+
+    <div class="float" id="scrollToTopBtn">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script>
+        const header = document.querySelector("header");
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                header.classList.add("shrink");
+                scrollToTopBtn.classList.add("show");
+            } else {
+                header.classList.remove("shrink");
+                scrollToTopBtn.classList.remove("show");
+            }
+        });
+
+        scrollToTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+</body>
+</html>
