@@ -237,13 +237,54 @@ nav ul li a:hover {
         padding: 15px 50px;
     }
 
+    header.shrink {
+        padding: 8px 30px;
+    }
+
+    nav ul {
+        justify-content: space-between;
+    }
+
     nav ul li {
         margin-right: 20px;
+    }
+
+    .dropdown-content {
+        min-width: 120px;
+    }
+
+    .dropdown-content li {
+        padding: 8px 15px;
+    }
+
+    .search-container input {
+        width: 120px;
     }
 
     .button-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
+    }
+
+    .button {
+        width: 100%;
+        height: auto;
+    }
+
+    .button img {
+        height: 100%;
+    }
+
+    .footer {
+        padding: 8px 0;
+    }
+
+    .float {
+        padding: 8px;
+    }
+
+    .float i {
+        font-size: 20px;
     }
 }
 
@@ -252,8 +293,17 @@ nav ul li a:hover {
         padding: 10px 20px;
     }
 
+    header img {
+        max-height: 30px;
+    }
+
+    header.shrink img {
+        max-height: 25px;
+    }
+
     nav ul {
         flex-direction: column;
+        align-items: flex-start;
     }
 
     nav ul li {
@@ -261,12 +311,48 @@ nav ul li a:hover {
         margin-bottom: 10px;
     }
 
+    nav ul li a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .dropdown-content {
+        min-width: 100px;
+        left: -20px;
+    }
+
+    .dropdown-content li {
+        padding: 6px 12px;
+    }
+
+    .search-container input {
+        width: 100px;
+    }
+
     .button-container {
         grid-template-columns: 1fr;
         gap: 10px;
     }
 
+    .button {
+        width: 100%;
+        height: auto;
+    }
+
     .button-text {
         font-size: 24px;
     }
+
+    .footer {
+        padding: 6px 0;
+    }
+
+    .float {
+        padding: 6px;
+    }
+
+    .float i {
+        font-size: 18px;
+    }
 }
+

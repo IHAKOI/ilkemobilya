@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İlke Mobilya - İletişim</title>
+    <title>İlke Mobilya - Banyo</title>
     <link rel="stylesheet" href="ürünlerimiz.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -46,12 +46,25 @@
     </header>
 
     <div class="content">
+        <h2>BANYO MOBİLYALARI</h2>
+
+        <div class="button-container">
+            <button class="button" onclick="openModal(0)">
+                <img src="img/banyodolabı1.1.jpg" alt="">
+            </button>
+        </div>
+
+        <div class="modal" id="imageModal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div class="dots-container" id="dotsContainer"></div>
+        </div>
 
     </div>
 
     <footer class="footer">
         <p>&copy; 2024 İlke Mobilya. Tüm Hakları Saklıdır.</p>
-        <p><a href="gizlilik.html">Gizlilik Politikası</a> | <a href="kullanım-şartları.html">Kullanım Şartları</a></p>
+        <a href="gizlilik.html">Gizlilik Politikası</a> | <a href="kullanım-şartları.html">Kullanım Şartları</a>
     </footer>
 
     <div class="float" id="scrollToTopBtn">
@@ -59,6 +72,48 @@
     </div>
 
     <script>
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        const dotsContainer = document.getElementById("dotsContainer");
+        const images = document.querySelectorAll(".button img");
+        const closeModal = document.querySelector(".close");
+
+        let currentIndex = 0;
+
+        function openModal(index) {
+            currentIndex = index;
+            modal.style.display = "block";
+            modalImage.src = images[currentIndex].src;
+            updateDots();
+        }
+
+        function closeModalFunction() {
+            modal.style.display = "none";
+        }
+
+        function updateDots() {
+            dotsContainer.innerHTML = "";
+            images.forEach((img, index) => {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                if (index === currentIndex) dot.classList.add("active");
+                dot.addEventListener("click", () => openModal(index));
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        images.forEach((img, index) => {
+            img.addEventListener("click", () => openModal(index));
+        });
+
+        closeModal.addEventListener("click", closeModalFunction);
+
+        window.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                closeModalFunction();
+            }
+        });
+
         const header = document.querySelector("header");
         const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 

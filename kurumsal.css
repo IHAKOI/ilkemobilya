@@ -200,13 +200,42 @@ nav ul li a:hover {
         padding: 15px 50px;
     }
 
+    header.shrink {
+        padding: 8px 30px;
+    }
+
     .content {
         padding: 20px 30px;
         margin: 120px 30px 40px 30px;
+        border-width: 4px;
     }
 
     nav ul li {
         margin-right: 20px;
+    }
+
+    .dropdown-content {
+        min-width: 140px;
+    }
+
+    .dropdown-content li {
+        padding: 8px 15px;
+    }
+
+    .search-container input {
+        width: 120px;
+    }
+
+    .footer {
+        padding: 8px 0;
+    }
+
+    .float {
+        padding: 8px;
+    }
+
+    .float i {
+        font-size: 20px;
     }
 }
 
@@ -215,9 +244,22 @@ nav ul li a:hover {
         padding: 10px 20px;
     }
 
+    header.shrink {
+        padding: 5px 15px;
+    }
+
+    header img {
+        max-height: 30px;
+    }
+
+    header.shrink img {
+        max-height: 25px;
+    }
+
     .content {
         padding: 15px;
         margin: 100px 15px 20px 15px;
+        border-width: 3px;
     }
 
     nav ul {
@@ -226,7 +268,22 @@ nav ul li a:hover {
     }
 
     nav ul li {
+        margin-right: 0;
         margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .dropdown-content {
+        min-width: 100px;
+        left: -20px;
+    }
+
+    .dropdown-content li {
+        padding: 6px 12px;
     }
 
     .search-container input {
@@ -236,4 +293,13 @@ nav ul li a:hover {
     .footer {
         padding: 10px 5px;
     }
+
+    .float {
+        padding: 6px;
+    }
+
+    .float i {
+        font-size: 18px;
+    }
 }
+
